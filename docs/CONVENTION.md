@@ -61,3 +61,26 @@ Ref: #1
 feat: 주문→정산 구매확정 이벤트 DTO 정의             ← 유형이 소문자
 [지갑] Wallet 도메인 및 지갑 생성 구현 (#51)         ← 대괄호 도메인, 번호 직접 씀
 ```
+
+## 3. 이슈와 PR
+
+### 이슈
+
+- 이슈는 템플릿(`.github/ISSUE_TEMPLATE`)으로 만든다. 템플릿을 고르면 라벨이 자동으로 붙는다.
+- 제목은 `[도메인] 설명` 형식이다. 예: `[order] 주문 취소 시 금액 오류`
+  - 특정 도메인에 속하지 않으면 `[common]`, 인프라·설정 작업이면 `[infra]`를 쓴다.
+
+| 템플릿 | 라벨 | 브랜치 |
+|---|---|---|
+| ✨ 기능 추가 | `type: feat` | `feature/<번호>` |
+| 🐞 버그 제보 | `type: bug` | `fix/<번호>` |
+| ♻️ 리팩터링 | `type: refactor` | `refactor/<번호>` |
+| 📝 문서 | `type: docs` | `docs/<번호>` |
+| ⚙️ 설정·기타 | `type: chore` | `chore/<번호>` |
+
+### PR
+
+- 기준 브랜치는 `dev`다.
+- 제목은 커밋 제목과 같은 `<Type>: <제목>` 형식이다. squash merge 때 이 제목이 커밋 제목이 된다.
+- 본문은 PR 템플릿(`.github/PULL_REQUEST_TEMPLATE.md`)을 따르고, `Closes #이슈번호`로 이슈를 연결한다.
+- PR 본문에 AI 표기(`🤖 Generated with ...`)를 넣지 않는다.
