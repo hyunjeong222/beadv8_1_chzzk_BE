@@ -8,13 +8,14 @@
 이슈 만들기 → dev에서 이슈별 브랜치 따기 → 작업 → PR → dev → PR → main
 
 feature/40 ─┐
-fix/45     ─┼──► PR (squash merge) ──► dev ──► PR ──► main
-docs/60    ─┘                          개발 환경         운영
+fix/45     ─┼──► PR (squash merge) ──► dev ──► PR (merge commit) ──► main
+docs/60    ─┘                          개발 환경                     운영
 ```
 
 - 오래 유지하는 브랜치는 `main`(운영)과 `dev`(개발 환경) 두 개다.
 - 둘 다 직접 커밋하지 않고, 항상 PR로만 합친다.
 - 작업 순서: 이슈를 만들고, `dev`에서 이슈별 브랜치를 따서 작업한 뒤 `dev`로 PR을 보낸다. `dev`에 모인 코드는 따로 PR을 보내 `main`에 합친다.
+- 병합 방식: 작업 브랜치 → `dev`는 squash merge로 합쳐 PR 하나가 커밋 하나로 남게 한다. `dev` → `main`은 일반 병합(Create a merge commit)으로 합친다. squash로 합치면 `main`과 `dev`의 이력이 갈라져 다음 반영 때 이미 반영한 커밋이 다시 보이거나 충돌이 난다.
 - 브랜치 이름은 `<유형>/<이슈번호>` 형식이다. `#`이나 한글 설명은 붙이지 않는다.
 
 | 브랜치 | 커밋 유형 | 이슈 라벨 | 예 |
