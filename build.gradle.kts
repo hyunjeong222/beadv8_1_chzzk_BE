@@ -4,7 +4,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.7"
 }
 
-group = "com"
+group = "com.chzzk"
 version = "0.0.1-SNAPSHOT"
 description = "beadv8_1_chzzk_BE"
 
